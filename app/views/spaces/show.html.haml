@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @space.title
+%p
+  %b Size:
+  = @space.size
+%p
+  %b Description:
+  = @space.description
+%p
+  %b Img url:
+  = @space.img_url
+
+//= link_to 'Edit', edit_space_path(@space)
+//\|
+= link_to 'Back', spaces_path

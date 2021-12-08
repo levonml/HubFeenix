@@ -1,0 +1,18 @@
+%p#notice= notice
+%h1.spaces_title Spaces
+%p.sectionDescription For different size groups and needs
+.flexContainer
+  .grid-container.cards
+    - @spaces.each do |space|
+      .flex-container-column.card      
+        %div.image
+          %img{:src => asset_path(space.img_url)}	
+        %h1= space.title
+        .size= space.size
+        .description= space.description
+        .manageCard
+          -#%button= link_to 'Show', space
+          -#%button= link_to 'Edit', edit_space_path(space)
+          -#%button= link_to 'Destroy', space, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Space', new_space_path
